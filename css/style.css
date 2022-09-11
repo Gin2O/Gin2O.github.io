@@ -574,7 +574,7 @@ body {
   }
 }
 .max-width {
-  max-width: 60rem;
+  max-width: 50rem;
 }
 @media (max-width: 480px) {
   .px3 {
@@ -693,14 +693,14 @@ body {
   #header #nav ul li.icon {
     position: absolute;
     top: 2rem;
-    right: 1rem;
+    right: 0.5rem;
     display: inline-block;
   }
   #header #nav ul.responsive li {
     display: block;
   }
   #header #nav li:not(:first-child) {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     padding-left: 245px;
     font-size: 1rem;
   }
