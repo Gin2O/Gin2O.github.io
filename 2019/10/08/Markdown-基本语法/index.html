@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Markdown 是一种纯文本格式的标记语言。通过 简单 的标记语法，它可以使普通文本内容具有一定的格式。 优点和缺点我就不说了… 因为这是我接触的第一个标记语言 2019年的时候反正我觉得挺好玩的*编辑文档我用的是‘**Notepad++*’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown 基本语法">
+<meta property="og:url" content="http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="中文科幻学术工坊官方网站(测试版)">
+<meta property="og:description" content="Markdown 是一种纯文本格式的标记语言。通过 简单 的标记语法，它可以使普通文本内容具有一定的格式。 优点和缺点我就不说了… 因为这是我接触的第一个标记语言 2019年的时候反正我觉得挺好玩的*编辑文档我用的是‘**Notepad++*’">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img0102/123.gif">
+<meta property="article:published_time" content="2019-10-08T02:30:20.000Z">
+<meta property="article:modified_time" content="2022-09-10T15:09:48.788Z">
+<meta property="article:author" content="Wulun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img0102/123.gif">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/sf_favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/sf_favicon-180x180.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/sf_favicon-180x180.png">
+        
+      
+    
+    <!-- title -->
+    <title>Markdown 基本语法</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://guide.chicon.org/">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2021/08/21/%E5%8F%A3%E8%A2%8B%E5%A6%96%E6%80%AA%E7%AC%AC%E5%85%AD%E4%B8%96%E4%BB%A3-ORAS%E4%B9%B1%E6%95%B0%E8%AE%B0%E5%BD%95/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&text=Markdown 基本语法"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&is_video=false&description=Markdown 基本语法"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Markdown 基本语法&body=Check out this article: http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&name=Markdown 基本语法&description=&lt;p&gt;Markdown 是一种纯文本格式的标记语言。通过 &lt;del&gt;&lt;em&gt;简单&lt;/em&gt;&lt;/del&gt; 的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
+&lt;p&gt;优点和缺点我就不说了… 因为这是我接触的第一个&lt;strong&gt;标记语言&lt;/strong&gt; &lt;del&gt;2019年的时候反正我觉得挺好玩的&lt;/del&gt;&lt;br&gt;*编辑文档我用的是‘**Notepad++*&lt;em&gt;’&lt;/em&gt;&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&t=Markdown 基本语法"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%B0%E4%BD%8F-%E8%BF%99%E4%BB%85%E4%BB%85%E6%98%AF%E5%BC%80%E5%A7%8B-%F0%9F%8E%AC"><span class="toc-number">1.</span> <span class="toc-text">记住 这仅仅是开始 🎬 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">一、标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">这是二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">这是四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.1.</span> <span class="toc-text">这是五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.1.1.</span> <span class="toc-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E4%BD%93"><span class="toc-number">1.3.</span> <span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">1.5.</span> <span class="toc-text">四、分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%9B%BE%E7%89%87"><span class="toc-number">1.6.</span> <span class="toc-text">五、图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.7.</span> <span class="toc-text">六、超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-number">1.8.</span> <span class="toc-text">七、列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.9.</span> <span class="toc-text">八、表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">1.10.</span> <span class="toc-text">九、代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.11.</span> <span class="toc-text">十、流程图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown%E5%92%8CHTNL%E6%B7%B7%E7%94%A8-%F0%9F%8E%AC"><span class="toc-number">2.</span> <span class="toc-text">Markdown和HTNL混用 🎬</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81-x2F-%E5%AF%BC%E8%AF%BB"><span class="toc-number">2.1.</span> <span class="toc-text">一、文章摘要&#x2F;导读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">2.2.</span> <span class="toc-text">二、插入和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%84%9A%E6%B3%A8"><span class="toc-number">2.3.</span> <span class="toc-text">三、脚注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E6%9C%AC%E9%AB%98%E4%BA%AE"><span class="toc-number">2.4.</span> <span class="toc-text">四、文本高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%96%87%E6%9C%AC-lt-font-gt"><span class="toc-number">2.5.</span> <span class="toc-text">五、文本&lt;font&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%96%87%E5%AD%97%E6%B3%A8%E9%9F%B3"><span class="toc-number">2.6.</span> <span class="toc-text">六、文字注音</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%88%86%E6%A0%8F"><span class="toc-number">2.7.</span> <span class="toc-text">七、分栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">2.8.</span> <span class="toc-text">八、数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8A%98%E5%8F%A0%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.9.</span> <span class="toc-text">九、折叠代码块</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Markdown 基本语法
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Wulun</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-08T02:30:20.000Z" itemprop="datePublished">2019-10-08</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Markdown 是一种纯文本格式的标记语言。通过 <del><em>简单</em></del> 的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p>优点和缺点我就不说了… 因为这是我接触的第一个<strong>标记语言</strong> <del>2019年的时候反正我觉得挺好玩的</del><br>*编辑文档我用的是‘**Notepad++*<em>’</em></p>
+<span id="more"></span>
+<h1 id="记住-这仅仅是开始-🎬"><a href="#记住-这仅仅是开始-🎬" class="headerlink" title="记住 这仅仅是开始 🎬 "></a><center>记住 这仅仅是开始 🎬 </center></h1><h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>需要作为”标题”的文字前面加 # 来表示<br>注：标准语法一般在#后跟个空格再写文字<br><code># &lt;-有一个空格</code> 只有二级以下包括二级标题才能在Hexo的目录中实现快速导航</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><hr>
+<h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><table>
+<thead>
+<tr>
+<th align="left">·操作</th>
+<th align="center">标记语言格式</th>
+<th align="center">中文描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">·加粗</td>
+<td align="center"><code>**这是加粗的文字**    </code></td>
+<td align="center">左右分别用两个*号</td>
+</tr>
+<tr>
+<td align="left">·斜体</td>
+<td align="center"><code>*这是倾斜的文字*      </code></td>
+<td align="center">左右分别用一个*号</td>
+</tr>
+<tr>
+<td align="left">·删除线</td>
+<td align="center"><code>~~这是加删除线的文字~~</code></td>
+<td align="center">左右分别用两个~~号</td>
+</tr>
+<tr>
+<td align="left">·变小</td>
+<td align="center"><code>~这是变小的文字~    </code></td>
+<td align="center">左右分别用一个~号</td>
+</tr>
+<tr>
+<td align="left">·混合操作</td>
+<td align="center"><code>***~~ 混 和 ~~***     </code></td>
+<td align="center">混合喽~（有点顺序）</td>
+</tr>
+</tbody></table>
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><del>这是加删除线的文字</del><br> <del>这是变小的文字</del><br><em><strong>~~ 混 和 ~~</strong></em></p>
+<hr>
+<h2 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h2><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…<br>貌似可以一直加下去，但没神马卵用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h2><p>三个或者三个以上的 - 或者 * 都可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">***</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>显示效果是一样的(<del>确信</del>斜眼笑</p>
+<hr>
+<h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><ul>
+<li><code>![图片alt]( 图片地址 &#39;&#39; 图片title &#39;&#39;)</code></li>
+<li><code>&#39;图片alt&#39;是显示在图片下面的文字（注释~</code></li>
+<li><code>&#39;图片title&#39;是当鼠标移到图片上时显示的~</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![blockchain](https://XXXXXX.jpg &quot;Pokemon&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><font size=3.5><mark> ·Test：</mark></font><br><img src="/img0102/123.gif" alt="wulun"></p>
+<hr>
+<h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p><font size=3.5><code>[超链接名](超链接地址 &quot;超链接title&quot;)   #title可加可不加</code></font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[简书](http://jianshu.com)</span><br><span class="line">[GitHub](https://github.com/ouyangzhiping/awesome-cognitive-science)</span><br><span class="line">[Paste Ubuntu](https://paste.ubuntu.com)</span><br><span class="line">[码云](https://gitee.com/)</span><br></pre></td></tr></table></figure>
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p><a target="_blank" rel="noopener" href="https://paste.ubuntu.com/">Paste Ubuntu</a></p>
+<p><font size=2>注：Markdown本身语法不支持链接在新页面中打开???<br>那么在这里提供一个思路供在新页面中打开——用html语言的a标签代替Markdown语法。</font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">示例</span><br><span class="line">&lt;a href=&quot;https://www.chiphell.com&quot; target=&quot;_blank&quot;&gt;CHH&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><ul>
+<li><table>
+<thead>
+<tr>
+<th align="left">列表格式</th>
+<th align="center">语法</th>
+<th align="center">注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">·无序列表</td>
+<td align="center"><code>- + *</code> <font size=2>任何一种都可以</font></td>
+<td align="center"><font size=2>- + * 跟内容之间要空格</font></td>
+</tr>
+<tr>
+<td align="left">·有序列表</td>
+<td align="center"><font size=2>数字加点</font></td>
+<td align="center"><font size=2>序号跟内容之间要有空格</font></td>
+</tr>
+<tr>
+<td align="left">·列表嵌套</td>
+<td align="center"><font size=2>上一级和下一级之间敲三个空格</font></td>
+<td align="center"><font size=2>一二级之间一个空格即可，二三级<br>之间就要3个空格了,或一个tab</font></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">无序列表</span><br><span class="line"></span><br><span class="line">- 列表内容（-）</span><br><span class="line">+ 列表内容（+）</span><br><span class="line">* 列表内容（*）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表</span><br><span class="line"></span><br><span class="line">1. 列表内容1</span><br><span class="line">2. 列表内容2</span><br><span class="line">3. 列表内容3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">列表嵌套</span><br><span class="line"></span><br><span class="line">+ 一级无序列表内容</span><br><span class="line"> + 二级无序列表内容</span><br><span class="line"></span><br><span class="line">+ 一级无序列表内容</span><br><span class="line"> + 二级无序列表内容</span><br><span class="line">    + 三级无序列表内容</span><br><span class="line"></span><br><span class="line">省略有序列表嵌套	</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p><code>无序列表</code></p>
+<ul>
+<li>列表内容（-）</li>
+</ul>
+<ul>
+<li>列表内容（+）</li>
+</ul>
+<ul>
+<li>列表内容（*）</li>
+</ul>
+<p><code>有序列表</code>…突然想起来有序列表的样式被我在css里面给删掉了😅</p>
+<ol>
+<li>列表内容1</li>
+<li>列表内容2</li>
+<li>列表内容3</li>
+</ol>
+<p><code>列表嵌套</code></p>
+<ul>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<p>————————————</p>
+<ul>
+<li>一级无序列表内容</li>
+<li>二级无序列表内容<ul>
+<li>三级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<p>省略有序列表嵌套</p>
+<hr>
+<h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="九、代码块"><a href="#九、代码块" class="headerlink" title="九、代码块"></a>九、代码块</h2><p><font size=3.5><mark> ·Test：</mark></font></p>
+<p>! <code>在行开头使用一个 Tab 可以获得一个无行标代码块的效果 注意：要与上一行之间有换行符</code></p>
+<pre><code>无行标代码块的效果
+</code></pre>
+<hr>
+<pre><code>单行代码：代码之间分别用一个反引号包起来 `代码内容`
+</code></pre>
+<p><code>代码内容</code></p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</span><br><span class="line">|```|</span><br><span class="line">  代码...</span><br><span class="line">  代码...     反引号旁边的&#x27;|&#x27;，使用时去掉</span><br><span class="line">  代码...     此处为为了防止转译</span><br><span class="line">|```|</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p><font size=3.5>（这是一个神奇的东西，可是我现在<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4d0020bde612">还不会</a>哈哈哈哈）</font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">安装hexo-filter-flowchart</span><br><span class="line">npm install --save hexo-filter-flowchart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#使用了 . 来替换 ` 显示源码</span><br><span class="line">...flow </span><br><span class="line">st=&gt;start: Start|past:&gt;http://www.baidu.com[blank]</span><br><span class="line">e=&gt;end: End:&gt;http://www.google.com</span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes or No?|approved:&gt;http://www.google.com</span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: catch something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line">cond(yes, right)-&gt;c2</span><br><span class="line">cond(no)-&gt;sub1(left)-&gt;op1</span><br><span class="line">c2(yes)-&gt;io-&gt;e</span><br><span class="line">c2(no)-&gt;op2-&gt;e</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start|past:&gt;http://www.baidu.com[blank]</span><br><span class="line">e=&gt;end: End:&gt;http://www.google.com</span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes or No?|approved:&gt;http://www.google.com</span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: catch something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line">cond(yes, right)-&gt;c2</span><br><span class="line">cond(no)-&gt;sub1(left)-&gt;op1</span><br><span class="line">c2(yes)-&gt;io-&gt;e</span><br><span class="line">c2(no)-&gt;op2-&gt;e</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/588ab3d22eb8"><font size=5><code>hexo-renderer-markdown-it 插件 详解</code></font></a></p>
+<hr>
+<h1 id="Markdown和HTNL混用-🎬"><a href="#Markdown和HTNL混用-🎬" class="headerlink" title="Markdown和HTNL混用 🎬"></a><center>Markdown和HTNL混用 🎬</center></h1><h2 id="一、文章摘要-x2F-导读"><a href="#一、文章摘要-x2F-导读" class="headerlink" title="一、文章摘要&#x2F;导读"></a>一、文章摘要&#x2F;导读</h2><ul>
+<li><p>HTML 注释不会被渲染到页面中。</p>
+</li>
+<li><p>More 左右各留一个英文空格。</p>
+  <!-- More --></li>
+</ul>
+<p><font size=3.5><mark> ·No Test：</mark></font><br>φ(*￣0￣)</p>
+<hr>
+<h2 id="二、插入和删除"><a href="#二、插入和删除" class="headerlink" title="二、插入和删除"></a>二、插入和删除</h2><ul>
+<li>插入和删除在审稿的时候经常用到，表示一个修改动作</li>
+<li>从标记为插入或删除的文本上，方便用户了解之前和现在的版本。</li>
+<li><code>&lt;del&gt; 表示删除，&lt;ins&gt; 表示插入。</code></li>
+<li><code>&lt;del&gt; 和 &lt;ins&gt; 一起用表示修改。</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">苍蝇座的位置极易分辨，它位于南十字座和 &lt;del&gt;长蛇座&lt;/del&gt; &lt;ins&gt;半人马座&lt;/ins&gt; 南边，蝘蜓座以北的船底座和圆规座之间的银河中，「煤袋星云」就在苍蝇座、南十字座和半人马座的交界处，在位于 +10° 到 -90° 之间纬度的地区可全见。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p>苍蝇座的位置极易分辨，它位于南十字座和 <del>长蛇座</del> <ins>半人马座</ins> 南边，蝘蜓座以北的船底座和圆规座之间的银河中，「煤袋星云」就在苍蝇座、南十字座和半人马座的交界处，在位于 +10° 到 -90° 之间纬度的地区可全见。</p>
+<hr>
+<h2 id="三、脚注"><a href="#三、脚注" class="headerlink" title="三、脚注"></a>三、脚注</h2><ol>
+<li><code>HTML 没实现出来实现</code><ul>
+<li>关键词左边和 </sup> 右边，各留一个英文空格。</li>
+<li>页底的脚注信息，用 Markdown 的有序列表语法即可。</li>
+<li>这个方法的缺点是需要人肉维护脚注的序号，应尽量少用。 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Here is a footnote reference, <span class="language-xml"><span class="tag">&lt;<span class="name">sup</span>&gt;</span></span>1<span class="language-xml"><span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span>  and another. <span class="language-xml"><span class="tag">&lt;<span class="name">sup</span>&gt;</span></span>2<span class="language-xml"><span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span> ,<span class="language-xml"><span class="tag">&lt;<span class="name">sub</span>&gt;</span></span>xxx<span class="language-xml"><span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span>实现下标</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>#注释</p>
+<ol>
+<li>Here is the footnote.</li>
+<li>Here’s one with multiple blocks.</li>
+</ol>
+<hr>
+<p>实现两个链接之间互转<br><a href="#bib1" id="bib1ref"><sup>[1]</sup></a><br><a id="bib1" href="#bib1ref"><sup>[1]</sup></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;font size=3.5&gt;&lt;mark&gt; ·No Test：&lt;/mark&gt;&lt;/font&gt;</span><br><span class="line">φ(*￣0￣)</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">2. [`markdown-it-footnote 实现`](https://www.npmjs.com/package/markdown-it-footnote)</span><br><span class="line">	- 脚注标识符中不能包含空格、tab或换行符，且标识符不被渲染</span><br><span class="line">	- 每条脚注的前后都应该有空行</span><br><span class="line">	- 如果需要在脚注中分段，可以&lt;mark&gt;将后面的段缩进来&lt;/mark&gt;表示它们属于同一段脚注</span><br><span class="line">	- 脚注不一定必须位于文档的最后部分，除了块元素内部</span><br><span class="line">	- 脚注按照`[^1]、[^2]、...、[^longnote]` longnote是干嘛的不懂</span><br><span class="line">​```markdown</span><br><span class="line">Here is a footnote reference,[^1] and another.[^longnote]</span><br><span class="line"></span><br><span class="line">[^1]: Here is the footnote.</span><br><span class="line">[^longnote]: Here&#x27;s one with multiple blocks.</span><br><span class="line">	123456789</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<ul>
+<li>Here is a footnote reference,[^1] and another.[^2]</li>
+</ul>
+<p>[^1]: <code>示例</code>：Here is the footnote.<br>[^2]: <code>示例</code>：Here’s one with multiple blocks.</p>
+<pre><code>换行demo123456789
+</code></pre>
+<hr>
+<h2 id="四、文本高亮"><a href="#四、文本高亮" class="headerlink" title="四、文本高亮"></a>四、文本高亮</h2><ul>
+<li><p>‌<code>&lt;mark&gt;</code> ‌是 HTML5 的新标签。</p>
+<p>  …… <mark>这是纯黄</mark> ……</p>
+</li>
+</ul>
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p><mark>这是纯黄</mark></p>
+<hr>
+<h2 id="五、文本-lt-font-gt"><a href="#五、文本-lt-font-gt" class="headerlink" title="五、文本&lt;font&gt;"></a>五、文本<code>&lt;font&gt;</code></h2><ul>
+<li>尽管 <code>&lt;font&gt;</code> 是 HTML5 的不建议标签，但语义上仍然是所有标签中最好的。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;font size=&quot;3&quot; color=&quot;red&quot;&gt;This is some text!&lt;/font&gt;</span><br><span class="line">&lt;font size=&quot;2&quot; color=&quot;blue&quot;&gt;This is some text!&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;verdana&quot; color=&quot;green&quot;&gt;This is some text!&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/tag_font.asp">可选的属性</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">color</td>
+<td align="center"><font size=2>rgb(x,x,x)<br>#xxxxxx<br>colorname</font></td>
+<td><font size=2 color=red>不赞成使用。请使用样式取代它。</font><br>规定文本的<a target="_blank" rel="noopener" href="http://www.voidcn.com/article/p-firwkkkw-vc.html">颜色</a></td>
+</tr>
+<tr>
+<td align="center">face</td>
+<td align="center">font_family<br></td>
+<td><font size=2  color=red>不赞成使用。请使用样式取代它。</font><br>规定文本的字体。</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">number<br></td>
+<td><font size=2  color=red>不赞成使用。请使用样式取代它。</font><br>规定文本的大小[^longnote]。</td>
+</tr>
+</tbody></table>
+<p>[^longnote]: <code>Size</code>：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3</p>
+<p><font size=3.5><mark> ·No Test：</mark></font><br>φ(*￣0￣)</p>
+<hr>
+<h2 id="六、文字注音"><a href="#六、文字注音" class="headerlink" title="六、文字注音"></a>六、文字注音</h2><ul>
+<li>‌<code>&lt;ruby&gt; 和 ‌&lt;rt&gt; 是 HTML5 的新标签。</code></li>
+<li>对于一些多音字或者生癖字，留下注音能帮助读者更好的阅读。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ruby</span>&gt;</span>饕餮 <span class="tag">&lt;<span class="name">rt</span>&gt;</span>tāo tiè<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;/<span class="name">ruby</span>&gt;</span> 是古代中国神话传说中的一种神秘怪物，别名叫 <span class="tag">&lt;<span class="name">ruby</span>&gt;</span>狍鸮 <span class="tag">&lt;<span class="name">rt</span>&gt;</span>páo xiāo<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;/<span class="name">ruby</span>&gt;</span>，古书《山海经·北次二经》介绍其特点是：其形状如羊身人面，眼在腋下，虎齿人手。</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p><ruby>饕餮 <rt>tāo tiè</rt></ruby> 是古代中国神话传说中的一种神秘怪物，别名叫 <ruby>狍鸮 <rt>páo xiāo</rt></ruby>，古书《山海经·北次二经》介绍其特点是：其形状如羊身人面，眼在腋下，虎齿人手。</p>
+<hr>
+<h2 id="七、分栏"><a href="#七、分栏" class="headerlink" title="七、分栏"></a>七、分栏</h2><ul>
+<li>分栏可以有效改善阅读体验，CSS3 里提供了分栏的样式。</li>
+<li>columns 是个复合复性，参见<a target="_blank" rel="noopener" href="https://css-tricks.com/guide-responsive-friendly-css-columns/">这个介绍</a>。</li>
+<li>如果你的文章是发往多个渠道的，不建议使用。比如hexo显示的就不太好</li>
+<li>你会发现加了<code>&lt;font&gt;</code>标签来引导hexo对于html标签的渲染</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="tag">&lt;<span class="name">font</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;columns: 2;&quot;</span>&gt;</span></span><br><span class="line">严格地说，这个集子很难说是“自选集”。“自选集”应该是从大量的作品里选出自己认为比较满意的。我不能做到这一点。一则是我的作品数量本来就少，挑得严了，就更会所剩无几；二则，我对自己得作品无偏爱。有以为外国的汉学家发给我一张调查表，其中一栏是：“你认为自己最具有代表性的作品是哪几篇”，我实在不知道如何填。我的自选集不是选出了多少篇，而是从我的作品里剔除了一些篇。这不像农民田间选种，倒有点像老太太择（zhai）菜。老太太择菜是很宽容的，往往把择掉的黄叶、桔梗拿起来再看看，觉得凑活着还能吃，于是又搁回到好菜的一堆里。常言说：剪刀篮里的都是菜，我对自选集就有一点是这样。</span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span>汪曾祺先生 一九八六年十二月十四日序于北京蒲黄榆路寓居~</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<blockquote>
+<p><font size=3 face="楷体"><div style="columns: 2;"><br>严格地说，这个集子很难说是“自选集”。“自选集”应该是从大量的作品里选出自己认为比较满意的。我不能做到这一点。一则是我的作品数量本来就少，挑得严了，就更会所剩无几；二则，我对自己得作品无偏爱。有以为外国的汉学家发给我一张调查表，其中一栏是：“你认为自己最具有代表性的作品是哪几篇”，我实在不知道如何填。我的自选集不是选出了多少篇，而是从我的作品里剔除了一些篇。这不像农民田间选种，倒有点像老太太<ruby>择<rt>zhai</rt></ruby>菜。老太太择菜是很宽容的，往往把择掉的黄叶、桔梗拿起来再看看，觉得凑活着还能吃，于是又搁回到好菜的一堆里。常言说：剪刀篮里的都是菜，我对自选集就有一点是这样。<br><br><br>汪曾祺先生 一九八六年十二月十四日序于北京蒲黄榆路寓居~</p>
+</blockquote>
+</div></font>
+
+<hr>
+<h2 id="八、数学公式"><a href="#八、数学公式" class="headerlink" title="八、数学公式"></a>八、数学公式</h2><ul>
+<li>在两边再包围一对<code>$</code>，可以嵌入一个数学公式块。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sum_&#123;i=1&#125;^n a_i=0$</span><br></pre></td></tr></table></figure>
+<p>呕吼 好像现在还不支持</p>
+<hr>
+<h2 id="九、折叠代码块"><a href="#九、折叠代码块" class="headerlink" title="九、折叠代码块"></a>九、折叠代码块</h2><ul>
+<li><code> &lt;details&gt;</code>标签前面需要有空格等占位符(hexo好像不用)</li>
+<li><code>&lt;summary&gt;</code> 标签中为标题，默认为”详细信息”</li>
+<li>代码块内可以用markdown</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是一个折叠代码块</span><br><span class="line"> &lt;details&gt;</span><br><span class="line">&lt;summary&gt;点击查看折叠代码块&lt;/summary&gt;</span><br><span class="line"></span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=3.5><mark> ·Test：</mark></font></p>
+<p>这是一个折叠代码块<br> <details></p>
+<summary>点击查看折叠代码块</summary>
+<font size=3 face="楷体"><div style="columns: 2;">
+严格地说，这个集子很难说是“自选集”。“自选集”应该是从大量的作品里选出自己认为比较满意的。我不能做到这一点。一则是我的作品数量本来就少，挑得严了，就更会所剩无几；二则，我对自己得作品无偏爱。有以为外国的汉学家发给我一张调查表，其中一栏是：“你认为自己最具有代表性的作品是哪几篇”，我实在不知道如何填。我的自选集不是选出了多少篇，而是从我的作品里剔除了一些篇。这不像农民田间选种，倒有点像老太太<ruby>择<rt>zhai</rt></ruby>菜。老太太择菜是很宽容的，往往把择掉的黄叶、桔梗拿起来再看看，觉得凑活着还能吃，于是又搁回到好菜的一堆里。常言说：剪刀篮里的都是菜，我对自选集就有一点是这样。
+<br><br>汪曾祺先生 一九八六年十二月十四日序于北京蒲黄榆路寓居~
+</div></font>
+</details>
+
+
+<hr>
+<p><a target="_blank" rel="noopener" href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">GitHub上基本的编写和格式化语法</a></p>
+<br>
+<br>
+
+<hr>
+<p><font size=6 face="Times New Roman"><center><strong>Over</strong></center></font></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://guide.chicon.org/">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%B0%E4%BD%8F-%E8%BF%99%E4%BB%85%E4%BB%85%E6%98%AF%E5%BC%80%E5%A7%8B-%F0%9F%8E%AC"><span class="toc-number">1.</span> <span class="toc-text">记住 这仅仅是开始 🎬 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">一、标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">这是二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">这是四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.1.</span> <span class="toc-text">这是五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.2.1.1.1.1.</span> <span class="toc-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E4%BD%93"><span class="toc-number">1.3.</span> <span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">1.5.</span> <span class="toc-text">四、分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%9B%BE%E7%89%87"><span class="toc-number">1.6.</span> <span class="toc-text">五、图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.7.</span> <span class="toc-text">六、超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-number">1.8.</span> <span class="toc-text">七、列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.9.</span> <span class="toc-text">八、表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">1.10.</span> <span class="toc-text">九、代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.11.</span> <span class="toc-text">十、流程图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown%E5%92%8CHTNL%E6%B7%B7%E7%94%A8-%F0%9F%8E%AC"><span class="toc-number">2.</span> <span class="toc-text">Markdown和HTNL混用 🎬</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81-x2F-%E5%AF%BC%E8%AF%BB"><span class="toc-number">2.1.</span> <span class="toc-text">一、文章摘要&#x2F;导读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">2.2.</span> <span class="toc-text">二、插入和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%84%9A%E6%B3%A8"><span class="toc-number">2.3.</span> <span class="toc-text">三、脚注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E6%9C%AC%E9%AB%98%E4%BA%AE"><span class="toc-number">2.4.</span> <span class="toc-text">四、文本高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%96%87%E6%9C%AC-lt-font-gt"><span class="toc-number">2.5.</span> <span class="toc-text">五、文本&lt;font&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%96%87%E5%AD%97%E6%B3%A8%E9%9F%B3"><span class="toc-number">2.6.</span> <span class="toc-text">六、文字注音</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%88%86%E6%A0%8F"><span class="toc-number">2.7.</span> <span class="toc-text">七、分栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">2.8.</span> <span class="toc-text">八、数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8A%98%E5%8F%A0%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.9.</span> <span class="toc-text">九、折叠代码块</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&text=Markdown 基本语法"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&is_video=false&description=Markdown 基本语法"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Markdown 基本语法&body=Check out this article: http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&title=Markdown 基本语法"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&name=Markdown 基本语法&description=&lt;p&gt;Markdown 是一种纯文本格式的标记语言。通过 &lt;del&gt;&lt;em&gt;简单&lt;/em&gt;&lt;/del&gt; 的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
+&lt;p&gt;优点和缺点我就不说了… 因为这是我接触的第一个&lt;strong&gt;标记语言&lt;/strong&gt; &lt;del&gt;2019年的时候反正我觉得挺好玩的&lt;/del&gt;&lt;br&gt;*编辑文档我用的是‘**Notepad++*&lt;em&gt;’&lt;/em&gt;&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2019/10/08/Markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/&t=Markdown 基本语法"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2022
+    Wulun
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://guide.chicon.org/">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
